@@ -1,0 +1,47 @@
+# Investigating the computation of Eaton & Kortum
+# by Bernardo Diaz de Astarloa
+
+# KNITRO options file
+
+# Algorithm choice
+# 0 Lets KNITRO choose the algorithm
+# 1 Interior-Point
+# 2 Interior-Point CG
+# 3 Active Set
+algorithm 0  	 
+
+# Tolerance for feasibility (constraints)
+feastol 1e-15
+
+# Jacobian 
+# 1 User-provided exact
+# 2 Forward finite differences
+# 3 Central finite differences
+gradopt 2
+
+# Hessian computed using fwd finite differences
+# 1 User-provided exact
+# 2 Dense quasi-Newton BFGS
+# 3 Dense quasi-Newton SR1
+# 4 Finite differences
+# 5 User-provided routine for Hessian-vector products
+# 6 Limited memory quasi-Newton BFGS 
+hessopt 2
+
+# Max number of iterations. Default 10,000
+maxit 2000
+
+# Crossover to Active Set. If >0 tells the max number of iters
+#maxcrossit 20	 	 
+
+# Activates multiple starting points
+#multistart 1	         
+
+# Max number of starting points
+#ms_maxsolves 20
+
+# Band range on where to look for starting points
+#ms_maxbndrange 5
+
+# Which output to produce
+outlev 3
